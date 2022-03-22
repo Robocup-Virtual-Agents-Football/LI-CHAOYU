@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="NAO68">
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.73988259377685E-17" />
+      <inertia
+        ixx="4.1555891513169E-20"
+        ixy="2.32846932315302E-22"
+        ixz="-1.35584681408591E-23"
+        iyy="2.46093777747506E-20"
+        iyz="-9.18564243044319E-23"
+        izz="2.30289113809148E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="head1">
+    <inertial>
+      <origin
+        xyz="6.25372997664631E-07 0.000158371027097426 -0.0181638535919461"
+        rpy="0 0 0" />
+      <mass
+        value="3.64829046451713E-18" />
+      <inertia
+        ixx="1.6339605473873E-21"
+        ixy="2.76456201754414E-26"
+        ixz="1.79084557882726E-25"
+        iyy="1.69964135382535E-21"
+        iyz="-5.63817700649132E-24"
+        izz="3.63773672347732E-22" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/head1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/head1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck"
+    type="revolute">
+    <origin
+      xyz="0.47504 -0.47689 0.58122"
+      rpy="0 0 0.0017099" />
+    <parent
+      link="body" />
+    <child
+      link="head1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head2">
+    <inertial>
+      <origin
+        xyz="-0.474220313904524 0.581224229153061 0.477705818477059"
+        rpy="0 0 0" />
+      <mass
+        value="1.11438377083869E-17" />
+      <inertia
+        ixx="1.85775699859269E-20"
+        ixy="1.11395918027865E-21"
+        ixz="-1.12557586572029E-22"
+        iyy="1.84946247546707E-20"
+        iyz="-4.54506669612874E-23"
+        izz="1.34829394346157E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/head2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/head2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="neck2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="head1" />
+    <child
+      link="head2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left hand">
+    <inertial>
+      <origin
+        xyz="0.000231357564223156 -0.00190218499329953 -0.0197769966525416"
+        rpy="0 0 0" />
+      <mass
+        value="5.5595930385648E-18" />
+      <inertia
+        ixx="2.61247563040612E-21"
+        ixy="-7.83803479971208E-24"
+        ixz="-1.5501611725242E-23"
+        iyy="2.43764737848018E-21"
+        iyz="3.11393945946181E-23"
+        izz="1.26967231032274E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder1"
+    type="revolute">
+    <origin
+      xyz="0.47504 -0.37893 0.55497"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="left hand" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left arm big">
+    <inertial>
+      <origin
+        xyz="-0.546835137086555 -0.378932244590865 -0.484383496439525"
+        rpy="0 0 0" />
+      <mass
+        value="1.98144086306489E-17" />
+      <inertia
+        ixx="8.56847844201776E-21"
+        ixy="-3.45459830960897E-22"
+        ixz="-1.42217513387006E-22"
+        iyy="1.70024836057973E-20"
+        iyz="-1.88487359475286E-23"
+        izz="1.46085641985287E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left arm big.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left arm big.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left arm1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 -1.5878" />
+    <parent
+      link="left hand" />
+    <child
+      link="left arm big" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left arm wrist">
+    <inertial>
+      <origin
+        xyz="-0.000300627987979141 6.42422987140456E-07 0.0169080996055426"
+        rpy="0 0 0" />
+      <mass
+        value="3.90413440836974E-18" />
+      <inertia
+        ixx="1.9166000225257E-21"
+        ixy="1.1680714133564E-26"
+        ixz="-1.79256871620132E-23"
+        iyy="1.82365586206386E-21"
+        iyz="-7.54555405748239E-26"
+        izz="3.89968200127217E-22" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left arm wrist.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left arm wrist.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left arm small 2"
+    type="revolute">
+    <origin
+      xyz="-0.10491 -0.013997 0.00030335"
+      rpy="-1.5708 1.5058 -1.5541" />
+    <parent
+      link="left arm big" />
+    <child
+      link="left arm wrist" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left hand small">
+    <inertial>
+      <origin
+        xyz="0.32634 0.44718 0.50689"
+        rpy="0 0 0" />
+      <mass
+        value="6.9084E-18" />
+      <inertia
+        ixx="1.78E-21"
+        ixy="2.0992E-22"
+        ixz="-6.6334E-24"
+        iyy="1.6795E-21"
+        iyz="-1.6648E-23"
+        izz="2.2124E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand small.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand small.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left wrist"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0.0023733 -1.5708" />
+    <parent
+      link="left arm wrist" />
+    <child
+      link="left hand small" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left hand end">
+    <inertial>
+      <origin
+        xyz="0.37464 0.47231 -0.33393"
+        rpy="0 0 0" />
+      <mass
+        value="6.2068E-18" />
+      <inertia
+        ixx="4.3852E-21"
+        ixy="-4.4671E-24"
+        ixz="5.6214E-22"
+        iyy="3.7566E-21"
+        iyz="9.5437E-25"
+        izz="2.4434E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand end.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hand end.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left hand 2"
+    type="revolute">
+    <origin
+      xyz="0 0.11325 0"
+      rpy="1.5708 -0.098584 0" />
+    <parent
+      link="left hand small" />
+    <child
+      link="left hand end" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right hand">
+    <inertial>
+      <origin
+        xyz="-0.000336724530452581 -0.00192396358407243 0.0192366627225955"
+        rpy="0 0 0" />
+      <mass
+        value="5.17411528603493E-18" />
+      <inertia
+        ixx="2.36457520392244E-21"
+        ixy="-7.96302539666317E-24"
+        ixz="3.73716448794011E-24"
+        iyy="2.23773220475309E-21"
+        iyz="-3.38012344701264E-23"
+        izz="1.21109559600572E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder2"
+    type="revolute">
+    <origin
+      xyz="0.47504 -0.57484 0.55497"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="right hand" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right arm big">
+    <inertial>
+      <origin
+        xyz="-0.511845444117378 -0.574837035011824 -0.521219992048967"
+        rpy="0 0 0" />
+      <mass
+        value="1.64846561332705E-17" />
+      <inertia
+        ixx="7.69423813547866E-21"
+        ixy="6.72217182520053E-22"
+        ixz="-4.91053600395591E-22"
+        iyy="1.41287894080308E-20"
+        iyz="8.34174928713744E-23"
+        izz="1.20294459318915E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right arm big.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right arm big.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right arm big 1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 -1.6573" />
+    <parent
+      link="right hand" />
+    <child
+      link="right arm big" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right arm wirst">
+    <inertial>
+      <origin
+        xyz="0.000236701999197231 2.20681250820975E-05 0.0147214372394816"
+        rpy="0 0 0" />
+      <mass
+        value="3.88316586076598E-18" />
+      <inertia
+        ixx="1.56210679101218E-21"
+        ixy="-1.49422899815827E-26"
+        ixz="-1.87170923977323E-23"
+        iyy="1.64750762458163E-21"
+        iyz="-8.86395640723124E-25"
+        izz="3.99134229996595E-22" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right arm wirst.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right arm wirst.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right arm amall 2"
+    type="revolute">
+    <origin
+      xyz="-0.10487 0.014266 0.0003"
+      rpy="-1.5704 0.025456 -1.5739" />
+    <parent
+      link="right arm big" />
+    <child
+      link="right arm wirst" />
+    <axis
+      xyz="0.016083 0 0.99987" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right hand end">
+    <inertial>
+      <origin
+        xyz="-0.00303056176871253 0.0284832083389335 -0.00320249750533108"
+        rpy="0 0 0" />
+      <mass
+        value="6.15908776621831E-18" />
+      <inertia
+        ixx="2.76815214633173E-21"
+        ixy="-3.27353309952699E-22"
+        ixz="2.70178708356602E-23"
+        iyy="2.12707644918625E-21"
+        iyz="-3.42237470670638E-23"
+        izz="2.56318869796249E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand end.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand end.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hand 2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.4848 0 0" />
+    <parent
+      link="right arm wirst" />
+    <child
+      link="right hand end" />
+    <axis
+      xyz="0 0.085844 0.99631" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right hand end 2">
+    <inertial>
+      <origin
+        xyz="0.596996608774289 0.51377159863588 -0.291824876447589"
+        rpy="0 0 0" />
+      <mass
+        value="6.20674431300642E-18" />
+      <inertia
+        ixx="4.38547970342589E-21"
+        ixy="-4.43103555154008E-24"
+        ixz="-5.62196034976773E-22"
+        iyy="3.75667597489994E-21"
+        iyz="-8.13895904431975E-25"
+        izz="2.443576685909E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand end 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hand end 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hand end 3"
+    type="revolute">
+    <origin
+      xyz="0 0.113080427602968 -0.00975022528825331"
+      rpy="1.48477836109706 0.0126377571856202 -0.00108973380374061" />
+    <parent
+      link="right hand end" />
+    <child
+      link="right hand end 2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left hip">
+    <inertial>
+      <origin
+        xyz="0.040248522118935 0.475036465706723 -0.63418177283438"
+        rpy="0 0 0" />
+      <mass
+        value="4.52057686722953E-18" />
+      <inertia
+        ixx="2.66103426708217E-21"
+        ixy="1.40907172878585E-22"
+        ixz="-1.59225535701849E-23"
+        iyy="1.03483165824365E-21"
+        iyz="2.7561310564608E-22"
+        izz="2.68598934049288E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left hip 2"
+    type="revolute">
+    <origin
+      xyz="0.475036465706723 -0.476894234999137 0.419974229153056"
+      rpy="0 -0.785398163397459 1.5707963267949" />
+    <parent
+      link="body" />
+    <child
+      link="left hip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left leg big">
+    <inertial>
+      <origin
+        xyz="-0.00462883953431759 -0.00473141052475978 -0.0171568126005021"
+        rpy="0 0 0" />
+      <mass
+        value="9.03902183483721E-18" />
+      <inertia
+        ixx="5.38838650076551E-21"
+        ixy="-4.20398726191118E-22"
+        ixz="4.33565885208545E-22"
+        iyy="5.40567192504222E-21"
+        iyz="4.62144860828014E-22"
+        izz="2.02631345532162E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg big.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg big.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left leg big 1"
+    type="revolute">
+    <origin
+      xyz="0 0.00109999869500277 -0.0724799999999993"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="left hip" />
+    <child
+      link="left leg big" />
+    <axis
+      xyz="0.0017029359842846 0 0.999998550003465" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left leg big 2">
+    <inertial>
+      <origin
+        xyz="-0.366829400441054 -0.473867236538863 0.427353198635747"
+        rpy="0 0 0" />
+      <mass
+        value="3.03744060462066E-17" />
+      <inertia
+        ixx="2.28496700257108E-20"
+        ixy="4.78902359098332E-21"
+        ixz="-1.50368297604557E-21"
+        iyy="4.93510120716424E-20"
+        iyz="2.42404389632594E-22"
+        izz="3.9570590365604E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg big 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg big 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left leg big 3"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.57199674981344 0.00120788205022478 0.78230132291305" />
+    <parent
+      link="left leg big" />
+    <child
+      link="left leg big 2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left leg small">
+    <inertial>
+      <origin
+        xyz="-0.257088071600062 -0.480438920947403 0.426753198635746"
+        rpy="0 0 0" />
+      <mass
+        value="2.17324013064851E-17" />
+      <inertia
+        ixx="1.0643034248658E-20"
+        ixy="-2.90244026684464E-21"
+        ixz="6.88609899186874E-22"
+        iyy="3.74338644340874E-20"
+        iyz="1.42314353018173E-22"
+        izz="3.55875077181444E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg small.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left leg small.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left ankle 2"
+    type="revolute">
+    <origin
+      xyz="-0.0999924847971221 0.00122632663556776 0.000600000000000822"
+      rpy="0 0 -0.0204043420180219" />
+    <parent
+      link="left leg big 2" />
+    <child
+      link="left leg small" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left ankle">
+    <inertial>
+      <origin
+        xyz="-0.17232 -0.47488 0.42715"
+        rpy="0 0 0" />
+      <mass
+        value="1.3015E-17" />
+      <inertia
+        ixx="4.8549E-21"
+        ixy="2.5763E-22"
+        ixz="5.9846E-24"
+        iyy="4.146E-21"
+        iyz="-3.5174E-24"
+        izz="7.0988E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left ankle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left ankle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left ankle2"
+    type="revolute">
+    <origin
+      xyz="-0.102746579116211 0.000583796208956766 -0.000399999999999623"
+      rpy="0 0 0.0376068198832301" />
+    <parent
+      link="left leg small" />
+    <child
+      link="left ankle" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left foot">
+    <inertial>
+      <origin
+        xyz="-0.03219 0.0042166 -0.031058"
+        rpy="0 0 0" />
+      <mass
+        value="2.1641E-17" />
+      <inertia
+        ixx="5.1574E-20"
+        ixy="2.4046E-23"
+        ixz="-1.1553E-22"
+        iyy="4.4176E-20"
+        iyz="-1.2733E-21"
+        izz="1.2071E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/left foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left foot 2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="left ankle" />
+    <child
+      link="left foot" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right hip 1">
+    <inertial>
+      <origin
+        xyz="0.63418177283438 0.475036465706723 0.040248522118935"
+        rpy="0 0 0" />
+      <mass
+        value="5.24861974936838E-18" />
+      <inertia
+        ixx="2.75482218587176E-21"
+        ixy="-1.43700119366448E-22"
+        ixz="6.22372284374278E-23"
+        iyy="1.155826493167E-21"
+        iyz="2.57593000748196E-22"
+        izz="2.88289880541827E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hip 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hip 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hip 2"
+    type="revolute">
+    <origin
+      xyz="0.475036465706723 -0.476894234999137 0.419974229153056"
+      rpy="0 0.785398163397438 1.5707963267949" />
+    <parent
+      link="body" />
+    <child
+      link="right hip 1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right hip 3">
+    <inertial>
+      <origin
+        xyz="0.0045425790462118 0.00473079998472287 0.017147324883173"
+        rpy="0 0 0" />
+      <mass
+        value="9.0181479560913E-18" />
+      <inertia
+        ixx="5.37199175148441E-21"
+        ixy="-4.24360499385528E-22"
+        ixz="4.51405931770755E-22"
+        iyy="5.37919801188414E-21"
+        iyz="4.68009936125962E-22"
+        izz="2.0245806516641E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hip 3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right hip 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right hip 4"
+    type="revolute">
+    <origin
+      xyz="0 0.000399999713572796 -0.0724056380810744"
+      rpy="-1.5707963267949 0 0" />
+    <parent
+      link="right hip 1" />
+    <child
+      link="right hip 3" />
+    <axis
+      xyz="0.0016470116894098 0 -0.999998643675328" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right leg big">
+    <inertial>
+      <origin
+        xyz="-0.36770322223629 -0.473562486173606 0.529802413190317"
+        rpy="0 0 0" />
+      <mass
+        value="2.97663269433919E-17" />
+      <inertia
+        ixx="2.22202899735969E-20"
+        ixy="4.63065041043333E-21"
+        ixz="1.31438311690924E-21"
+        iyy="4.78976362005858E-20"
+        iyz="-2.10508186450956E-22"
+        izz="3.8637851506708E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right leg big.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right leg big.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right leg big  2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.56959590379779 0.0011930048696728 -2.35309476762726" />
+    <parent
+      link="right hip 3" />
+    <child
+      link="right leg big" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right leg small">
+    <inertial>
+      <origin
+        xyz="-0.227531237809799 -0.495357230748695 0.530602413190317"
+        rpy="0 0 0" />
+      <mass
+        value="2.06596600447776E-17" />
+      <inertia
+        ixx="1.03886056447953E-20"
+        ixy="-2.80097773559894E-21"
+        ixz="-5.24481330482526E-22"
+        iyy="3.72763449057132E-20"
+        iyz="-1.00133188645037E-22"
+        izz="3.53574088505253E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right leg small.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right leg small.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right leg small 2"
+    type="revolute">
+    <origin
+      xyz="-0.099992 0.0012847 -0.0008"
+      rpy="0 0 -0.082781" />
+    <parent
+      link="right leg big" />
+    <child
+      link="right leg small" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right ankle">
+    <inertial>
+      <origin
+        xyz="-0.177698615978288 -0.479533024812933 0.530202413190317"
+        rpy="0 0 0" />
+      <mass
+        value="1.26126170632208E-17" />
+      <inertia
+        ixx="4.6945439154778E-21"
+        ixy="2.4832703556955E-22"
+        ixz="-4.04136568604938E-24"
+        iyy="3.8480044252495E-21"
+        iyz="6.90300721901712E-24"
+        izz="6.70380735036329E-21" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right ankle.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right ankle.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right ankle 2"
+    type="revolute">
+    <origin
+      xyz="-0.10275 0.00058381 0.0004"
+      rpy="0 0 0.10838" />
+    <parent
+      link="right leg small" />
+    <child
+      link="right ankle" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right foot">
+    <inertial>
+      <origin
+        xyz="-0.032799 -0.0032018 -0.031125"
+        rpy="0 0 0" />
+      <mass
+        value="2.1727E-17" />
+      <inertia
+        ixx="5.1819E-20"
+        ixy="-2.4205E-22"
+        ixz="-7.3902E-23"
+        iyy="4.4346E-20"
+        iyz="1.5634E-21"
+        izz="1.2159E-20" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://NAO68/meshes/right foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right foot 2"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="right ankle" />
+    <child
+      link="right foot" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
